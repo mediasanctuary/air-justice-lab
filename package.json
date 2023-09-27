@@ -1,0 +1,23 @@
+{
+  "name": "air-justice-lab",
+  "version": "0.0.1",
+  "description": "Air Justice Lab is a community air monitoring and educational initiative based at NATURE Lab and serving the greater Capital Region.",
+  "main": "scripts/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node scripts/index.js"
+  },
+  "keywords": [
+    "purpleair",
+    "air pollution",
+    "environmental justice",
+    "data justice"
+  ],
+  "author": "Dan Phiffer <dan@phiffer.org>",
+  "license": "MIT",
+  "dependencies": {
+    "csv": "^6.3.3",
+    "dotenv": "^16.3.1",
+    "glob": "^10.3.10"
+  }
+}

@@ -1,0 +1,29 @@
+name: tco batch test
+
+on:
+  workflow_dispatch:
+  schedule:
+  - cron: '0 0 * * *'
+
+jobs:
+  scheduled:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check out repo
+      uses: actions/checkout@v3
+    - name: Setup node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: "lts/hydrogen"
+    - name: Install modules
+      run: npm install
+    - name: Load PurpleAir data
+      run: node tco-batch-test.js data/tco-urls.csv >> data/test-results.csv
+    - name: Commit results
+      run: |-
+        git config user.name "Automated"
+        git config user.email "actions@users.noreply.github.com"
+        git add -A
+        timestamp=$(date -u)
+        git commit -m "PurpleAir Data: ${timestamp}" || exit 0
+        git push
