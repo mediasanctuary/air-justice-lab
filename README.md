@@ -12,10 +12,25 @@
 
 The file `data/sensors.csv` has a list of Air Justice Lab affiliated PurpleAir sensors.
 
-### CSV Columns
+### sensors.csv columns
 
 1. `id` - PurpleAir `sensor_index`.
 2. `name` - the public sensor name
+
+## Records
+
+Each sensor's historical records are stored in `data/sensor-[id]` folders. Batches of records are stored in files named `sensor-[id]-[start timestamp]-[end timestamp].csv`.
+
+### records columns
+
+1. `sensor_index` - PurpleAir sensor ID
+2. `timestamp` - Unix epoch timestamp
+3. `pm2.5_alt` - ALT cf=3 pm2.5 reading (10 minute average)
+4. `pm2.5_atm` - ATM pm2.5 reading (10 minute average)
+5. `pm2.5_cf_1` - CF=1 pm2.5 reading (10 minute average)
+6. `temperature` - temperature in degrees Fahrenheit
+7. `humidity` - relative percentage humidity
+8. `pressure` - current pressure in Millibars
 
 ## Data Attribution
 
