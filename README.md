@@ -14,7 +14,7 @@ The file `data/sensors.csv` has a list of Air Justice Lab affiliated PurpleAir s
 
 ### sensors.csv columns
 
-1. `id` - PurpleAir `sensor_index`.
+1. `id` - PurpleAir `sensor_index`
 2. `name` - the public sensor name
 
 ## Records
@@ -31,6 +31,8 @@ Each sensor's historical records are stored in `data/sensor-[id]` folders. Batch
 6. `temperature` - temperature in degrees Fahrenheit
 7. `humidity` - relative percentage humidity
 8. `pressure` - current pressure in Millibars
+
+The various pm2.5 values are described in [this forum post](https://community.purpleair.com/t/what-is-the-difference-between-cf-1-atm-and-alt/6442).
 
 ## Data Attribution
 
