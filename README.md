@@ -2,11 +2,13 @@
 
 [Air Justice Lab](https://www.mediasanctuary.org/project/capital-region-air-justice-lab/) is a community air monitoring and educational initiative based at [NATURE Lab](https://www.mediasanctuary.org/initiatives/nature-lab/) and serving the greater Capital Region.
 
-This repository archives historical air quality data (stored in the `data` directory) and scripts for archiving via the PurpleAir API (stored in the `scripts` directory).
+This repository archives historical air quality data (stored in the `data` directory) and scripts for archiving via the PurpleAir API (stored in the `scripts` directory.
+
+Every 10 minutes a GitHub Actions workflow runs `node scripts/index.js` and incrementally loads historic sensor data. The same script also loads new data once every 24 hours.
 
 ## Dependencies
 
-* node.js v18
+* [node.js v18](https://nodejs.org/)
 * [PurpleAir API key](https://develop.purpleair.com/)
 
 ## Developer Setup

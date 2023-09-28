@@ -50,7 +50,7 @@ export default class Data {
 				const timestamp = this.timestamps[sensor.id];
 				this.save(sensor, await this.loadBackward(sensor, timestamp.start));
 				await new Promise(resolve => setTimeout(resolve, 1000));
-				if (now - timestamp.end > 23 * 60 * 60) {
+				if (now - timestamp.end > 24 * 60 * 60) {
 					// only load forward if at least 23 hours have passed
 					this.save(sensor, await this.loadForward(sensor, timestamp.end));
 					await new Promise(resolve => setTimeout(resolve, 1000));
