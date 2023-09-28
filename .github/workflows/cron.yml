@@ -18,6 +18,8 @@ jobs:
     - name: Install modules
       run: npm install
     - name: Load PurpleAir data
+      env:
+        PURPLEAIR_API_KEY: ${{secrets.PURPLEAIR_API_KEY}}
       run: node scripts/index.js
     - name: Commit results
       run: |-
