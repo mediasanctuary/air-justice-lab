@@ -104,7 +104,7 @@ export default class Data {
 				} else {
 					let index = rsp.fields.indexOf(column);
 					let value = values[index];
-					if (column == 'pm2.5_atm') {
+					if (column.substr(0, 5) == 'pm2.5') {
 						value = value.toFixed(2); // two decimal precision
 					}
 					row.push(value);
