@@ -44,11 +44,16 @@ export default class Data {
 
 	async load() {
 		for (let sensor of this.index) {
-			const timestamp = this.timestamps[sensor.id];
-			this.save(sensor, await this.loadBackward(sensor, timestamp.start));
-			await new Promise(resolve => setTimeout(resolve, 1000));
-			this.save(sensor, await this.loadForward(sensor, timestamp.end));
-			await new Promise(resolve => setTimeout(resolve, 1000));
+			try {
+				const timestamp = this.timestamps[sensor.id];
+				this.save(sensor, await this.loadBackward(sensor, timestamp.start));
+				await new Promise(resolve => setTimeout(resolve, 1000));
+				this.save(sensor, await this.loadForward(sensor, timestamp.end));
+				await new Promise(resolve => setTimeout(resolve, 1000));
+			} catch(error) {
+				process.stderr.write(`Error: ${error.message}\n`);
+				await new Promise(resolve => setTimeout(resolve, 10000));
+			}
 		}
 	}
 
