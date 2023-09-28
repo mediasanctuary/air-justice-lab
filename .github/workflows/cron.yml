@@ -1,4 +1,4 @@
-name: tco batch test
+name: Load PurpleAir data
 
 on:
   workflow_dispatch:
