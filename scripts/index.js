@@ -4,9 +4,8 @@ import dotenv from "dotenv";
 dotenv.config();
 
 const data = new Data([
-	'pm2.5_alt',
-	'pm2.5_atm',
-	'pm2.5_cf_1',
+	'pm2.5_alt_a',
+	'pm2.5_alt_b',
 	'temperature',
 	'humidity',
 	'pressure'

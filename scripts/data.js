@@ -43,22 +43,28 @@ export default class Data {
 	}
 
 	async load() {
+		const now = Math.floor(Date.now() / 1000);
 		for (let sensor of this.index) {
 			try {
+				console.log(`Loading "${sensor.name}" (${sensor.id})`);
 				const timestamp = this.timestamps[sensor.id];
 				this.save(sensor, await this.loadBackward(sensor, timestamp.start));
 				await new Promise(resolve => setTimeout(resolve, 1000));
-				this.save(sensor, await this.loadForward(sensor, timestamp.end));
-				await new Promise(resolve => setTimeout(resolve, 1000));
+				if (now - timestamp.end < 23 * 60 * 60) {
+					// only load forward if at least 23 hours have passed
+					this.save(sensor, await this.loadForward(sensor, timestamp.end));
+					await new Promise(resolve => setTimeout(resolve, 1000));
+				}
 			} catch(error) {
-				process.stderr.write(`Error: ${error.message}\n`);
+				console.error(`Error: ${error.message}\n`);
 				await new Promise(resolve => setTimeout(resolve, 10000));
 			}
 		}
 	}
 
 	async loadBackward(sensor, startTimestamp) {
-		process.stdout.write(`Loading "${sensor.name}" (${sensor.id}) before ${startTimestamp}\n`);
+		const startFormatted = this.formatDate(startTimestamp);
+		console.log(`    before ${startFormatted}`);
 		const rsp = await getSensorHistory(sensor.id, {
 			fields: this.fields.join(','),
 			end_timestamp: startTimestamp
@@ -67,7 +73,7 @@ export default class Data {
 	}
 
 	async loadForward(sensor, endTimestamp) {
-		process.stderr.write(`Loading "${sensor.name}" (${sensor.id}) after ${endTimestamp}\n`);
+		console.log(`    after ${endTimestamp}`);
 		const rsp = await getSensorHistory(sensor.id, {
 			fields: this.fields.join(','),
 			start_timestamp: endTimestamp + 1
@@ -77,11 +83,11 @@ export default class Data {
 
 	save(sensor, rsp) {
 		if (!rsp.data) {
-			process.stderr.write(`No data found: ${JSON.stringify(rsp)}`);
+			console.log(`    no data found: ${JSON.stringify(rsp)}`);
 			return;
 		}
 		if (rsp.data.length == 0) {
-			process.stderr.write('No records found\n');
+			console.log('    no records found');
 			return;
 		}
 		const header = ['sensor_index', 'time_stamp', ...this.fields];
@@ -92,7 +98,7 @@ export default class Data {
 		const filename = `${dirname}/sensor-${sensor.id}-${rsp.start_timestamp}-${rsp.end_timestamp}.csv`;
 		const rows = this.getRows(rsp, header);
 		fs.writeFileSync(filename, stringify([header, ...rows]), 'utf8');
-		process.stderr.write(`Saved ${rows.length} records ${this.timeRange(rsp)}\n`);
+		console.log(`    saved ${rows.length} records ${this.timeRange(rsp)}`);
 	}
 
 	getRows(rsp, columns) {

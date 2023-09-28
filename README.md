@@ -21,7 +21,7 @@ The file `data/sensors.csv` has a list of Air Justice Lab affiliated PurpleAir s
 
 ### sensors.csv columns
 
-1. `id` - PurpleAir `sensor_index`
+1. `id` - PurpleAir sensor identifier (`sensor_index` elsewhere)
 2. `name` - the public sensor name
 
 ## Records
@@ -32,15 +32,17 @@ Each sensor's historical records are stored in `data/sensor-[id]` folders. Batch
 
 1. `sensor_index` - PurpleAir sensor ID
 2. `timestamp` - Unix epoch timestamp
-3. `pm2.5_alt` - ALT cf=3 pm2.5 reading (10 minute average)
-4. `pm2.5_atm` - ATM pm2.5 reading (10 minute average)
-5. `pm2.5_cf_1` - CF=1 pm2.5 reading (10 minute average)
-6. `temperature` - temperature in degrees Fahrenheit
-7. `humidity` - relative percentage humidity
-8. `pressure` - current pressure in Millibars
-
-The various pm2.5 values are described in [this forum post](https://community.purpleair.com/t/what-is-the-difference-between-cf-1-atm-and-alt/6442).
+3. `pm2.5_alt_a` - pm2.5 A channel reading
+4. `pm2.5_alt_b` - pm2.5 B channel reading
+5. `temperature` - temperature in degrees Fahrenheit
+6. `humidity` - relative percentage humidity
+7. `pressure` - current pressure in Millibars
 
 ## Data Attribution
 
 Source: [PurpleAir](https://map.purpleair.com/1/mAQI/a10/p604800/cC0#12.04/42.7431/-73.6769)
+
+## References
+
+* [Sensors - Get Sensor History](https://api.purpleair.com/#api-sensors-get-sensor-history)
+* [What is the Difference Between CF=1, ATM, and ALT?](https://community.purpleair.com/t/what-is-the-difference-between-cf-1-atm-and-alt/6442)
