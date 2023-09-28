@@ -69,6 +69,10 @@ export default class Data {
 	}
 
 	save(sensor, rsp) {
+		if (!rsp.data) {
+			process.stderr.write(`No data found: ${JSON.stringify(rsp)}`);
+			return;
+		}
 		if (rsp.data.length == 0) {
 			process.stderr.write('No records found\n');
 			return;
