@@ -30,6 +30,8 @@ export default class Data {
 					start: now,
 					end: now
 				};
+				sensor.start = this.formatDate(now);
+				sensor.end = this.formatDate(now);
 				continue;
 			}
 			files.sort();
@@ -39,6 +41,8 @@ export default class Data {
 				start: parseInt(first.match(/sensor-\d+-(\d+)-\d+\.csv$/)[1]),
 				end: parseInt(last.match(/sensor-\d+-\d+-(\d+)\.csv$/)[1])
 			};
+			sensor.start = this.formatDate(this.timestamps[sensor.id].start);
+			sensor.end = this.formatDate(this.timestamps[sensor.id].end);
 		}
 	}
 
@@ -51,7 +55,7 @@ export default class Data {
 				this.save(sensor, await this.loadBackward(sensor, timestamp.start));
 				await new Promise(resolve => setTimeout(resolve, 1000));
 				if (now - timestamp.end > 24 * 60 * 60) {
-					// only load forward if at least 23 hours have passed
+					// only load forward if at least 24 hours have passed
 					this.save(sensor, await this.loadForward(sensor, timestamp.end));
 					await new Promise(resolve => setTimeout(resolve, 1000));
 				}
@@ -60,6 +64,7 @@ export default class Data {
 				await new Promise(resolve => setTimeout(resolve, 10000));
 			}
 		}
+		this.saveIndex();
 	}
 
 	async loadBackward(sensor, startTimestamp) {
@@ -89,23 +94,27 @@ export default class Data {
 			console.log('    no records found');
 			return;
 		}
-		const header = ['sensor_index', 'time_stamp', ...this.fields];
+		const header = ['id', 'time_stamp', ...this.fields];
 		const dirname = `./data/sensor-${sensor.id}`;
 		if (!fs.existsSync(dirname)) {
 			fs.mkdirSync(dirname, 0o755);
 		}
-		const filename = `${dirname}/sensor-${sensor.id}-${rsp.start_timestamp}-${rsp.end_timestamp}.csv`;
 		const rows = this.getRows(rsp, header);
+		const count = rows.length;
+		const start = rows[0][1];
+		const end = rows[count - 1][1];
+		const filename = `${dirname}/sensor-${sensor.id}-${start}-${end}.csv`;
 		fs.writeFileSync(filename, stringify([header, ...rows]), 'utf8');
-		console.log(`    saved ${rows.length} records ${this.timeRange(rsp)}`);
+		console.log(`    saved ${count} records ${this.timeRange(start, end)}`);
+		this.updateIndex(sensor, start, end);
 	}
 
 	getRows(rsp, columns) {
 		return rsp.data.map(values => {
 			let row = [];
 			for (let column of columns) {
-				if (column == 'sensor_index') {
-					row.push(rsp.sensor_index)
+				if (column == 'id') {
+					row.push(rsp.sensor_index);
 				} else {
 					let index = rsp.fields.indexOf(column);
 					let value = values[index];
@@ -119,14 +128,32 @@ export default class Data {
 		}).reverse();
 	}
 
-	timeRange(rsp) {
-		const start = this.formatDate(rsp.start_timestamp);
-		const end = this.formatDate(rsp.end_timestamp);
+	timeRange(startTimestamp, endTimestamp) {
+		const start = this.formatDate(startTimestamp);
+		const end = this.formatDate(endTimestamp);
 		return `${start} to ${end}`;
 	}
 
 	formatDate(timestamp) {
 		const date = new Date(timestamp * 1000);
 		return date.toJSON().replace('.000Z', '');
+	}
+
+	updateIndex(sensor, startTimestamp, endTimestamp) {
+		const start = this.formatDate(startTimestamp);
+		const end = this.formatDate(endTimestamp);
+		if (!sensor.start || start < sensor.start) {
+			sensor.start = start;
+		}
+		if (!sensor.end || end > sensor.end) {
+			sensor.end = end;
+		}
+	}
+
+	saveIndex() {
+		const csvData = stringify(this.index, {
+			header: true
+		});
+		fs.writeFileSync('./data/sensors.csv', csvData, 'utf8');
 	}
 }
