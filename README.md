@@ -43,8 +43,8 @@ Each sensor's historical records are stored in `data/sensor-[id]` folders. Batch
 7. `pm2.5_cf_1_a` - PM 2.5 CF1 channel A
 8. `pm2.5_cf_1_b` - PM 2.5 CF1 channel B
 9. `temperature` - degrees Fahrenheit
-11. `humidity` - relative percentage humidity
-12. `pressure` - pressure in Millibars
+10. `humidity` - relative percentage humidity
+11. `pressure` - pressure in Millibars
 
 ## Data Attribution
 
