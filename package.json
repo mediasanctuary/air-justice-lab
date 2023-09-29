@@ -1,6 +1,6 @@
 {
   "name": "air-justice-lab",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Air Justice Lab is a community air monitoring and educational initiative based at NATURE Lab and serving the greater Capital Region.",
   "main": "scripts/index.js",
   "type": "module",
