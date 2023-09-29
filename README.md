@@ -4,7 +4,7 @@
 
 This repository archives historical air quality data (stored in the `data` directory) and scripts for archiving via the PurpleAir API (stored in the `scripts` directory.
 
-Every 10 minutes a GitHub Actions workflow runs `node scripts/index.js` and incrementally loads historic sensor data. The same script also loads new data once every 24 hours.
+Every 10 minutes a GitHub Actions workflow runs `node scripts/index.js` and incrementally loads historical sensor data. The same script also loads new data once every 24 hours.
 
 ## Dependencies
 
@@ -43,14 +43,15 @@ Each sensor's historical records are stored in `data/sensor-[id]` folders. Batch
 7. `pm2.5_cf_1_a` - PM 2.5 CF1 channel A
 8. `pm2.5_cf_1_b` - PM 2.5 CF1 channel B
 9. `temperature` - degrees Fahrenheit
-11. `humidity` - relative percentage humidity
-12. `pressure` - pressure in Millibars
-
-## Data Attribution
-
-Source: [PurpleAir](https://map.purpleair.com/1/mAQI/a10/p604800/cC0#12.04/42.7431/-73.6769)
+10. `humidity` - relative percentage humidity
+11. `pressure` - pressure in Millibars
 
 ## References
 
+* [Sensor map]((https://map.purpleair.com/1/mAQI/a10/p604800/cC0#12.04/42.7431/-73.6769))
 * [Sensors - Get Sensor History](https://api.purpleair.com/#api-sensors-get-sensor-history)
 * [What is the Difference Between CF=1, ATM, and ALT?](https://community.purpleair.com/t/what-is-the-difference-between-cf-1-atm-and-alt/6442)
+
+## Data Attribution
+
+Source: PurpleAir
