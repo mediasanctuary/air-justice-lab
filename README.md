@@ -48,7 +48,7 @@ Each sensor's historical records are stored in `data/sensor-[id]` folders. Batch
 
 ## References
 
-* [Sensor map]((https://map.purpleair.com/1/mAQI/a10/p604800/cC0#12.04/42.7431/-73.6769))
+* [Sensor map](https://map.purpleair.com/1/mAQI/a10/p604800/cC0#12.04/42.7431/-73.6769)
 * [Sensors - Get Sensor History](https://api.purpleair.com/#api-sensors-get-sensor-history)
 * [What is the Difference Between CF=1, ATM, and ALT?](https://community.purpleair.com/t/what-is-the-difference-between-cf-1-atm-and-alt/6442)
 
