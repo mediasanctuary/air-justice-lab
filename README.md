@@ -4,7 +4,7 @@
 
 This repository archives historical air quality data (stored in the `data` directory) and scripts for archiving via the PurpleAir API (stored in the `scripts` directory.
 
-Every 10 minutes a GitHub Actions workflow runs `node scripts/index.js` and incrementally loads historic sensor data. The same script also loads new data once every 24 hours.
+Each day a GitHub Actions workflow runs `node scripts/index.js` to incrementally load historical sensor data and new data.
 
 ## Dependencies
 
