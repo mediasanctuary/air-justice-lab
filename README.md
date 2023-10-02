@@ -45,13 +45,10 @@ Each sensor's historical records are stored in `data/sensor-[id]` folders. Batch
 9. `temperature` - degrees Fahrenheit
 10. `humidity` - relative percentage humidity
 11. `pressure` - pressure in Millibars
-<<<<<<< HEAD
 
 ## Data Attribution
 
 Source: [PurpleAir](https://map.purpleair.com/1/mAQI/a10/p604800/cC0#12.04/42.7431/-73.6769)
-=======
->>>>>>> adb72692f99fd1aeac19ac1460b0ca22a305cdb4
 
 ## References
 
