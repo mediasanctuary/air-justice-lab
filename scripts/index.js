@@ -1,7 +1,4 @@
-import Data from "./data.js";
-import dotenv from "dotenv";
-
-dotenv.config();
+import Data from './data.js';
 
 const data = new Data([
 	'pm2.5_alt_a',
@@ -14,4 +11,6 @@ const data = new Data([
 	'humidity',
 	'pressure'
 ]);
-await data.load();
+await data.loadRecords();
+data.indexData();
+data.saveTimeSeries();
