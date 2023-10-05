@@ -1,11 +1,13 @@
 {
 	"name": "air-justice-lab",
-	"version": "0.0.4",
+	"version": "0.0.5",
 	"description": "Air Justice Lab is a community air monitoring and educational initiative based at NATURE Lab and serving the greater Capital Region.",
 	"main": "scripts/index.js",
 	"type": "module",
 	"scripts": {
-		"start": "node scripts/index.js"
+		"load": "node scripts/load.js",
+		"index": "node scripts/index.js",
+		"analyze": "node scripts/analyze.js"
 	},
 	"keywords": [
 		"purpleair",
@@ -19,6 +21,7 @@
 		"better-sqlite3": "^8.7.0",
 		"csv": "^6.3.3",
 		"dotenv": "^16.3.1",
-		"glob": "^10.3.10"
+		"glob": "^10.3.10",
+		"moment-timezone": "^0.5.43"
 	}
 }
