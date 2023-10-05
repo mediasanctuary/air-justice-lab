@@ -1,31 +1,35 @@
 name: Load PurpleAir data
 
 on:
-  workflow_dispatch:
-  schedule:
-  - cron: '0 0 * * *'
+    workflow_dispatch:
+    schedule:
+        - cron: "0 0 * * *"
 
 jobs:
-  scheduled:
-    runs-on: ubuntu-latest
-    steps:
-    - name: Check out repo
-      uses: actions/checkout@v3
-    - name: Setup node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: "lts/hydrogen"
-    - name: Install modules
-      run: npm install
-    - name: Load PurpleAir data
-      env:
-        PURPLEAIR_API_KEY: ${{secrets.PURPLEAIR_API_KEY}}
-      run: node scripts/index.js
-    - name: Commit results
-      run: |-
-        git config user.name "Automated"
-        git config user.email "actions@users.noreply.github.com"
-        git add -A
-        timestamp=$(date -Is)
-        git commit -m "PurpleAir Data: ${timestamp}" || exit 0
-        git push
+    scheduled:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Check out repo
+              uses: actions/checkout@v3
+            - name: Setup node.js
+              uses: actions/setup-node@v3
+              with:
+                  node-version: "lts/hydrogen"
+            - name: Install modules
+              run: npm install
+            - name: Load PurpleAir data
+              env:
+                  PURPLEAIR_API_KEY: ${{secrets.PURPLEAIR_API_KEY}}
+              run: node scripts/load.js
+            - name: Index data
+              run: node scripts/index.js
+            - name: Analyze data
+              run: node scripts/analyze.js
+            - name: Commit results
+              run: |-
+                  git config user.name "Automated"
+                  git config user.email "actions@users.noreply.github.com"
+                  git add -A
+                  timestamp=$(date -Is)
+                  git commit -m "PurpleAir Data: ${timestamp}" || exit 0
+                  git push

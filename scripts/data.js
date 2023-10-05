@@ -4,9 +4,10 @@ import { stringify } from 'csv-stringify/sync';
 import { parse } from 'csv-parse/sync';
 import fs from 'fs';
 import { globSync } from 'glob';
+import moment from 'moment-timezone';
 import path from 'path';
 
-export default class Data {
+class Data {
 
 	constructor(fields) {
 		this.fields = fields;
@@ -281,35 +282,36 @@ export default class Data {
 		const series = {};
 		const records = getRecords.all([threshold]);
 		for (let record of records) {
-			let date_time = new Date(parseInt(record.time_stamp) * 1000);
-			date_time.setMilliseconds(0);
-			date_time.setSeconds(0);
-			const minuteBin = Math.floor(date_time.getMinutes() / 10) * 10;
-			date_time.setMinutes(minuteBin);
-			date_time = date_time.toJSON().replace('.000Z', 'Z');
-			if (!series[date_time]) {
-				series[date_time] = {};
+			let utcDate = new Date(parseInt(record.time_stamp) * 1000);
+			utcDate.setMilliseconds(0);
+			utcDate.setSeconds(0);
+			utcDate.setMinutes(Math.floor(utcDate.getMinutes() / 10) * 10);
+
+			let localTimeString = moment.utc(utcDate).tz('America/New_York').format();
+
+			if (!series[localTimeString]) {
+				series[localTimeString] = {};
 			}
-			if (!series[date_time][record.sensor_id]) {
-				series[date_time][record.sensor_id] = [];
+			if (!series[localTimeString][record.sensor_id]) {
+				series[localTimeString][record.sensor_id] = [];
 			}
-			series[date_time][record.sensor_id].push(record.pm25_atm_a);
-			series[date_time][record.sensor_id].push(record.pm25_atm_b);
+			series[localTimeString][record.sensor_id].push(record.pm25_atm_a);
+			series[localTimeString][record.sensor_id].push(record.pm25_atm_b);
 			if (sensors.indexOf(parseInt(record.sensor_id)) < 0) {
 				sensors.push(parseInt(record.sensor_id));
 			}
 		}
 		sensors.sort((a, b) => a - b);
 
-		const date_times = Object.keys(series).sort();
+		const times = Object.keys(series).sort();
 		let count = 0;
 		const output = [
 			['Time', ...this.getSensorNames(sensors)]
 		];
-		for (let date_time of date_times) {
-			let row = [date_time];
-			for (let sensor_id of sensors) {
-				row.push(this.aqiFromPM(this.getAverage(series[date_time][sensor_id])));
+		for (let time of times) {
+			let row = [time];
+			for (let id of sensors) {
+				row.push(this.aqiFromPM(this.getAverage(series[time][id])));
 			}
 			output.push(row);
 			count++;
@@ -379,3 +381,17 @@ export default class Data {
 		return sensorIds.map(id => lookup[id]);
 	}
 }
+
+const data = new Data([
+	'pm2.5_alt_a',
+	'pm2.5_alt_b',
+	'pm2.5_atm_a',
+	'pm2.5_atm_b',
+	'pm2.5_cf_1_a',
+	'pm2.5_cf_1_b',
+	'temperature',
+	'humidity',
+	'pressure'
+]);
+
+export default data;
