@@ -4,7 +4,9 @@
 
 This repository archives historical air quality data (stored in the `data` directory) and scripts for archiving via the PurpleAir API (stored in the `scripts` directory.
 
-Each day a GitHub Actions workflow runs `node scripts/index.js` to incrementally load historical sensor data and new data.
+Each day a GitHub Actions workflow runs `node scripts/load.js` to incrementally load historical sensor data and new data. And then the same workflow runs `node scripts/index.js` and `node scripts/analyze.js` to produce `data/time-series.csv`, visualized below.
+
+[![7 Days of AQI](visualization.png)](https://www.datawrapper.de/_/6wAYP/)
 
 ## Dependencies
 
