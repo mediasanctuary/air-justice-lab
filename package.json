@@ -5,6 +5,7 @@
 	"main": "scripts/index.js",
 	"type": "module",
 	"scripts": {
+		"start": "npm run load && npm run index && npm run analyze",
 		"load": "node scripts/load.js",
 		"index": "node scripts/index.js",
 		"analyze": "node scripts/analyze.js"
