@@ -45,4 +45,7 @@ In summary - the necessary parameters to examine, for accurate reporting of the 
 
 AQI is calculated using the maximum PM2.5 reading of the day - it is therefore prudent to take averages along an hourly interval or less (e.g. 10 minutes)
 
-Download as a .csv file
+Download as a .csv file.
+
+## Analyzing Data
+You have options.
