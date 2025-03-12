@@ -8,7 +8,7 @@ This is a guide to using [AQI Calc.R](https://github.com/mediasanctuary/air-just
 
 Downloading the data directly from PurpleAir records each measurement as a specific type of object. My code relies on preserving these object types.
 
-- For example, 59.08 is a number. “Hazardous” is a string. 12-28-2024 is a date.
+- For example, `59.08` is a number. `“Hazardous”` is a string. `12-28-2024` is a date.
 
 **“Wait, but some of the sensors didn’t record humidity”**
 
