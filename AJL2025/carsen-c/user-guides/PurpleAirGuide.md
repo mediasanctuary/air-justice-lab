@@ -22,7 +22,7 @@ This is toggleable. You also want to make sure the keys are “Enabled” and ma
 
 ### II. Getting data
 
-Without access to the sensor IDs directly, I used [PurpleAir’s map](https://map.purpleair.com/air-quality-standards-us-epa-aqi?opt=%2F1%2Flp%2Fa10%2Fp2592000%2FcC5#12.63/42.7203/-73.6788) and cross-referenced the sensor indexes with the [Sanctuary’s sensor database.](https://docs.google.com/spreadsheets/d/1wBSrNwCtetKQs3XNUZnrLjtH0rG9Gr9igFVqSLAeTWA/edit?usp=sharing)- last checked, 1/28/25.
+Without access to the sensor IDs directly, I used [PurpleAir’s map](https://map.purpleair.com/air-quality-standards-us-epa-aqi?opt=%2F1%2Flp%2Fa10%2Fp2592000%2FcC5#12.63/42.7203/-73.6788) and cross-referenced the sensor indexes with the [Sanctuary’s sensor database.](https://docs.google.com/spreadsheets/d/1wBSrNwCtetKQs3XNUZnrLjtH0rG9Gr9igFVqSLAeTWA/edit?usp=sharing)- last updated, 1/28/25.
 
 You can pull data from any sensor on the map with its sensor index. [PurpleAir explains it better than me](https://community.purpleair.com/t/sensor-indexes-and-read-keys/4000)
 
