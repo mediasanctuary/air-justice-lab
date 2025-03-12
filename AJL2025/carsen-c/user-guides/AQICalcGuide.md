@@ -1,6 +1,6 @@
 Read through [PurpleAirGuide.md](https://github.com/mediasanctuary/air-justice-lab/blob/AJL-Spring-2025/AJL2025/carsen-c/user-guides/PurpleAirGuide.md) first.
 
-This is a guide to using [AQI Calc.R]()
+This is a guide to using [AQI Calc.R](https://github.com/mediasanctuary/air-justice-lab/blob/AJL-Spring-2025/AJL2025/carsen-c/Scripts/AQI%20Calc.R)
 
 ## Understanding the data pulled
 
