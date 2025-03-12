@@ -16,6 +16,10 @@ Yeah, that happens. I'm refining and testing a mathematical model for a correcti
 
 My script accounts for missing values.
 
+**Organizing the raw data.**
+
+Downloading the data directly from PurpleAir leaves the names of the files in a standardized format, as well. Keeping these files together in the same folder, and keeping their names, will make following this guide much easier.
+
 ## Help! This is my first time working with R :(
 
 ### I. Installing R and RStudio
@@ -38,13 +42,13 @@ tbw
 
 #### b. Libraries
 
-#### c. Sensor indices and sorting sensor
+#### c. Sensor indices and sorting sensors
 
 #### d. Reading and writing files
 
 ### IV. "Wait, so what does this script actually *do?*"
 
-## I'm confident understanding R - just give me the basics.
+## I know what I'm doing - just give me the basics.
 
 ### I. My algorithm.
 
