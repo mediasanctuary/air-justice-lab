@@ -27,3 +27,8 @@ The Air Justice Lab is also working on and testing their own corrective function
 PurpleAir's [interactive map](https://map.purpleair.com/air-quality-standards-us-epa-aqi?opt=%2F1%2Flp%2Fa10%2Fp604800%2FcC0#2.09/47.3/-65.83) automatically uses their readings of PM2.5 and calculates the corresponding AQI. However, when pulling sets of data, there isn't a built-in calculator.
 
 The Air Justice Lab therefore has written scripts that calculate AQI. The [Technical Assistance Document](https://github.com/mediasanctuary/air-justice-lab/blob/AJL-Spring-2025/AJL2025/assets/AQI-Technical-Assistance-Document.pdf) published by the EPA shows this process in detail.
+
+## Getting Started
+As of 3/12/2025, each intern and their scripts are available in this branch. Therefore, the reader is free to peruse the different methods and problem-solving, and choose to use and follow what they wish. 
+
+Note that the user guides for one algorithm will not apply to the others.
