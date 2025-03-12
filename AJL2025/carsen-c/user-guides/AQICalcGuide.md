@@ -18,7 +18,31 @@ My script accounts for missing values.
 
 ## Help! This is my first time working with R :(
 
+### I. Installing R and RStudio
+[RStudio Setup](https://posit.co/download/rstudio-desktop/) - I've also broken down the steps here for convenience.
+
+#### a. Installing R
+[R Archive Network](https://cran.rstudio.com/)
+
+Choose your operating system from the provided list, and download the **base.**
+
+#### b. Installing RStudio
+Click on the big blue button under "2. Install RStudio." The default directories are sufficient for new users.
+
+### II. Familiarizing yourself with RStudio
 tbw
+
+### III. Using AQI Calc.R - step by step
+
+#### a. Setting up the working directory
+
+#### b. Libraries
+
+#### c. Sensor indices and sorting sensor
+
+#### d. Reading and writing files
+
+### IV. "Wait, so what does this script actually *do?*"
 
 ## I'm confident understanding R - just give me the basics.
 
