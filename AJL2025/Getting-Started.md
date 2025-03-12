@@ -19,4 +19,6 @@ PurpleAir’s sensors measure one of six types of air pollution recognized by th
 ### PurpleAir and Sensor Error
 PurpleAir's relatively inexpensive air quality monitors make environmental activism accessible to citizen scientists. However, the methodology of measuring concentration of particulate matter leads to some significant but consistent error. The sensors are optically-based - that is, they [use lasers to count particles in the air](https://www2.purpleair.com/pages/technology) - and readings are affected by weather and climate.
 
-The Environmental Protection Agency (EPA) has created and updated corrective functions that process and clean raw data from PurpleAir. The full papers are available within the [assets]
+The Environmental Protection Agency (EPA) has created and updated corrective functions that process and clean raw data from PurpleAir. The full papers are available within the [assets folder](https://github.com/mediasanctuary/air-justice-lab/tree/AJL-Spring-2025/AJL2025/assets).
+
+Interns at the Air Justice Lab are also working on and testing their own corrective function that is a linear regression. The EPA's function will be used for analysis - this side project is being worked on in order to increase understanding over how the EPA's functions were built.
