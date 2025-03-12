@@ -24,7 +24,7 @@ tbw
 
 ### I. My algorithm.
 
-An algorithm is kind of like an essay outline for solving a problem. If you’d prefer to look directly at my scripts to see the exact code: [look no further](https://github.com/carsen-c/AJL-Carsen-s-copy/blob/main/Scripts/AQI%20Calc.R)
+An algorithm is kind of like an essay outline for solving a problem.
 
 #### a. Reading the data
 - Check to make sure all data pulls for each sensor are named in a standardized format (should be automatic, if you don’t touch the raw .csv files)
