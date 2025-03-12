@@ -48,4 +48,4 @@ AQI is calculated using the maximum PM2.5 reading of the day - it is therefore p
 Download as a .csv file.
 
 ## Analyzing Data
-You have options.
+You have options. My scripts are available [here](https://github.com/mediasanctuary/air-justice-lab/tree/AJL-Spring-2025/AJL2025/carsen-c/Scripts). User guides are available within this folder.
