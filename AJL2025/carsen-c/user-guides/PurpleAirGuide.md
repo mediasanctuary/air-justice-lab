@@ -36,7 +36,7 @@ If you feel distrustful of the downloading tool, working with the API is just as
 
 #### c. Choosing parameters.
 
-I referenced the EPA’s [technical assistance document](https://www.airnow.gov/publications/air-quality-index/technical-assistance-document-for-reporting-the-daily-aqi/) for the reporting of air quality and the [correction of PurpleAir PM2.5 measurements](https://www.epa.gov/sites/default/files/2021-05/documents/toolsresourceswebinar_purpleairsmoke_210519b.pdf). If these links are no longer active, PDFs are available [here](https://drive.google.com/drive/folders/1S2HjGhb5oyVl8R_TG8TtTs8-P0C4Hb2Y?usp=sharing)
+I referenced the EPA’s [technical assistance document](https://www.airnow.gov/publications/air-quality-index/technical-assistance-document-for-reporting-the-daily-aqi/) for the reporting of air quality and the [correction of PurpleAir PM2.5 measurements](https://www.epa.gov/sites/default/files/2021-05/documents/toolsresourceswebinar_purpleairsmoke_210519b.pdf). If these links are no longer active, PDFs are available [here](https://github.com/mediasanctuary/air-justice-lab/tree/AJL-Spring-2025/AJL2025/assets)
 
 In summary - the necessary parameters to examine, for accurate reporting of the daily air quality index, AQI, using PurpleAir sensors, are:
 - humidity (reported as: relative humidity, expressed as a percentage)
@@ -45,4 +45,4 @@ In summary - the necessary parameters to examine, for accurate reporting of the 
 
 AQI is calculated using the maximum PM2.5 reading of the day - it is therefore prudent to take averages along an hourly interval or less (e.g. 10 minutes)
 
-Download as a .csv
+Download as a .csv file
