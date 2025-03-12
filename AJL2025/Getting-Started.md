@@ -21,7 +21,7 @@ PurpleAir's relatively inexpensive air quality monitors make environmental activ
 
 The Environmental Protection Agency (EPA) has created and updated corrective functions that process and clean raw data from PurpleAir. The full papers are available within the [assets folder](https://github.com/mediasanctuary/air-justice-lab/tree/AJL-Spring-2025/AJL2025/assets).
 
-Interns at the Air Justice Lab are also working on and testing their own corrective function that is a linear regression. The EPA's function will be used for analysis - this side project is being worked on in order to increase understanding over how the EPA's functions were built.
+The Air Justice Lab is also working on and testing their own corrective function. The EPA's function will be used for analysis - this side project is being worked on in order to increase understanding over how the EPA's functions were built.
 
 ### Interpreting and Analyzing Data from PurpleAir
 PurpleAir's [interactive map](https://map.purpleair.com/air-quality-standards-us-epa-aqi?opt=%2F1%2Flp%2Fa10%2Fp604800%2FcC0#2.09/47.3/-65.83) automatically uses their readings of PM2.5 and calculates the corresponding AQI. However, when pulling sets of data, there isn't a built-in calculator.
