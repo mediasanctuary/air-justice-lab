@@ -11,6 +11,12 @@ PurpleAir’s sensors measure one of six types of air pollution recognized by th
 
 ## Dependencies
 [PurpleAir API Key](https://develop.purpleair.com/dashboards/keys)
+
 [RStudio)(https://posit.co/downloads/)
 
 ## Important things to read
+
+### PurpleAir and Sensor Error
+PurpleAir's relatively inexpensive air quality monitors make environmental activism accessible to citizen scientists. However, the methodology of measuring concentration of particulate matter leads to some significant but consistent error. The sensors are optically-based - that is, they [use lasers to count particles in the air](https://www2.purpleair.com/pages/technology) - and readings are affected by weather and climate.
+
+The Environmental Protection Agency (EPA) has created and updated corrective functions that process and clean raw data from PurpleAir. The full papers are available within the [assets]
