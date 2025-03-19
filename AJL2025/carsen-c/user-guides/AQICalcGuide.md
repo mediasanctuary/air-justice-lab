@@ -36,8 +36,7 @@ Click on the big blue button under "2. Install RStudio." The default directories
 ### II. Familiarizing yourself with RStudio
 When you first open RStudio, it'll look something like this:
 
-[RStudio](https://github.com/mediasanctuary/air-justice-lab/blob/AJL-Spring-2025/AJL2025/assets/R%20blank.PNG)
-
+![New RStudio]
 ### III. Using AQI Calc.R - step by step
 
 #### a. Setting up the working directory
