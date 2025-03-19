@@ -117,9 +117,15 @@ The green text in quotes is our standardized name. Replace that text - leave the
 
 Now, scroll down to the very end of the script. 
 
+![File writer](/AJL2025/assets/write.PNG)
+
 Replace the green text - leaving the quotation marks - with however you want to name the files with analyzed and corrected data.
 
 ### IV. "Wait, so what does this script actually *do?*"
+
+This script *does not generate visualizations of data.* It cleans, corrects, and prepares data about the presence of PM2.5 and the associated Air Quality Index (AQI) and hazard. For each file read, the script writes and stores a new file for each sensor. These new files can be directly manipulated to create graphs. It was my personal preference to split the workload this way.
+
+You are welcome to adapt my script as you see fit for your personal needs.
 
 ## I know what I'm doing - just give me the basics.
 
