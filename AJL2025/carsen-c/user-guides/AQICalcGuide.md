@@ -52,7 +52,7 @@ The very first step is to download [AQI Calc.R](https://github.com/mediasanctuar
 
 Once you have this, open AQI Calc.R in RStudio. It should look something like this:
 
-
+![AQI Calculator script first several lines](/AJL2025/assets/aqicalcsc.png)
 
 #### a. Setting up the working directory
 
