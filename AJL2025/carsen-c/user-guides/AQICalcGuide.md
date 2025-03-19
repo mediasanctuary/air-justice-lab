@@ -70,7 +70,7 @@ To set the working directory, click "Session" > "Set Working Directory" > "Choos
 
 Make sure your working directory is as specific as possible and down to the most specific subfolder - that is, you can see every file from PurpleAir like this:
 
-![Subfolder with all PurpleAir data](/AJL2025/assets/directory.PNG)
+![Subfolder with all PurpleAir data](/AJL2025/assets/directReal.PNG)
 
 Now, you're ready to start running code.
 
