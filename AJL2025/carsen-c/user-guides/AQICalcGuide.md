@@ -34,7 +34,9 @@ Choose your operating system from the provided list, and download the **base.**
 Click on the big blue button under "2. Install RStudio." The default directories are sufficient for new users.
 
 ### II. Familiarizing yourself with RStudio
-tbw
+When you first open RStudio, it'll look something like this:
+
+[RStudio]()
 
 ### III. Using AQI Calc.R - step by step
 
