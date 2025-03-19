@@ -48,6 +48,12 @@ To open an existing file - like AQL Calc.R - click "Open File..." and find "AQL 
 
 ### III. Using AQI Calc.R - step by step
 
+The very first step is to download [AQI Calc.R](https://github.com/mediasanctuary/air-justice-lab/blob/AJL-Spring-2025/AJL2025/carsen-c/Scripts/AQI%20Calc.R)
+
+Once you have this, open AQI Calc.R in RStudio. It should look something like this:
+
+
+
 #### a. Setting up the working directory
 
 #### b. Libraries
