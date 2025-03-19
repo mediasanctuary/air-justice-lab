@@ -56,6 +56,18 @@ Once you have this, open AQI Calc.R in RStudio. It should look something like th
 
 #### a. Setting up the working directory
 
+If you didn't edit or otherwise mess with your batch download from PurpleAir, there is a perfectly good folder on your computer to set as the working directory. Its name will be in the format of: "PurpleAir Download [Date of Download]"
+
+For example, my folder is named "PurpleAir Download 1-28-2025," and is located at "C:\Users\[redacted]\Downloads\Purp\PurpleAir Download 1-28-2025"
+
+To set the working directory, click "Session" > "Set Working Directory" > "Choose working directory"
+
+![Setting the working directory](/AJL2025/assets/workingdirectory.PNG)
+
+Make sure your working directory is as specific as possible and down to the most specific subfolder - that is, you can see every file from PurpleAir like this:
+
+![Subfolder with all PurpleAir data](/AJL2025/assets/directory.PNG)
+
 #### b. Libraries
 
 #### c. Sensor indices and sorting sensors
