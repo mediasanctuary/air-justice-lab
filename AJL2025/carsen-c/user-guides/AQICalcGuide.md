@@ -37,6 +37,9 @@ Click on the big blue button under "2. Install RStudio." The default directories
 When you first open RStudio, it'll look something like this:
 
 ![New RStudio](/AJL2025/assets/Rblank.PNG)
+
+To create a new file, click "File" > "New file" > "R Script"
+
 ### III. Using AQI Calc.R - step by step
 
 #### a. Setting up the working directory
