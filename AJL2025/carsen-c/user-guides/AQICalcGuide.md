@@ -105,13 +105,19 @@ When downloading batch data from PurpleAir, assuming its downloaded over the sam
 
 For example, let the files be named:
 
-- 164351 2024-12-28 2025-01-28 60-Minute Average
-- 156199 2024-12-28 2025-01-28 60-Minute Average
-- 156171 2024-12-28 2025-01-28 60-Minute Average
+- 164351 2024-12-28 2025-01-28 60-Minute Average.csv
+- 156199 2024-12-28 2025-01-28 60-Minute Average.csv
+- 156171 2024-12-28 2025-01-28 60-Minute Average.csv
 
 Everything but the sensor index at the beginning is the same.
 
+![File reader](/AJL2025/assets/filereader.PNG)
 
+The green text in quotes is our standardized name. Replace that text - leave the quotation marks - with whatever the dates and intervals are for *all of your files.* If you didn't mess with the initial download, they should be fine. In case they aren't, you should edit the file names directly before running AQI Calc.R.
+
+Now, scroll down to the very end of the script. 
+
+Replace the green text - leaving the quotation marks - with however you want to name the files with analyzed and corrected data.
 
 ### IV. "Wait, so what does this script actually *do?*"
 
