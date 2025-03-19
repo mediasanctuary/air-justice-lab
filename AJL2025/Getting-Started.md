@@ -12,7 +12,7 @@ PurpleAir’s sensors measure one of six types of air pollution recognized by th
 ## Dependencies
 [PurpleAir API Key](https://develop.purpleair.com/dashboards/keys)
 
-[RStudio)(https://posit.co/downloads/)
+[RStudio}(https://posit.co/downloads/)
 
 ## Important things to read
 
@@ -31,4 +31,4 @@ The Air Justice Lab therefore has written scripts that calculate AQI. The [Techn
 ## Getting Started
 As of 3/12/2025, each intern and their scripts are available in this branch. Therefore, the reader is free to peruse the different methods and problem-solving, and choose to use and follow what they wish. 
 
-Note that the user guides for one algorithm will not apply to the others.
+Note that the user guides for one script will not apply to the others.
