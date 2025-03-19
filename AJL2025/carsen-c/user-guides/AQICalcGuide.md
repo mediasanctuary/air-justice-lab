@@ -4,6 +4,8 @@ This is a guide to using [AQI Calc.R](https://github.com/mediasanctuary/air-just
 
 ## Understanding the data pulled
 
+This user guide assumes you have downloaded data from PurpleAir. Much of learning how to use AQI Calc.R involves practicing with it. So, if you haven't done so, please follow [PurpleAirGuide.md](https://github.com/mediasanctuary/air-justice-lab/blob/AJL-Spring-2025/AJL2025/carsen-c/user-guides/PurpleAirGuide.md) and download some data to practice with.
+
 **DON’T TOUCH THE .CSV**
 
 Downloading the data directly from PurpleAir records each measurement as a specific type of object. My code relies on preserving these object types.
