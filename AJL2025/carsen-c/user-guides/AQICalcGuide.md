@@ -95,8 +95,23 @@ AQI Calc.R stores the sensor indexes as a vector of numeric objects. Make sure t
 
 This vector is subdivided into two smaller vectors, as AQI Calc.R was initially written to compare the two groups. You may subset your indices however you want, or not at all.
 
+![Sensor indices vector](/AJL2025/assets/indices.PNG)
 
 #### d. Reading and writing files
+
+AQI Calc.R is designed to read one file at a time - that is, to process data from one sensor at a time - and to write a new file within the working directory that corresponds to each sensor.
+
+When downloading batch data from PurpleAir, assuming its downloaded over the same dates and time intervals, the file names are stored in a standardized format. AQI Calc.R reads through the file names using this standardized format.
+
+For example, let the files be named:
+
+- 164351 2024-12-28 2025-01-28 60-Minute Average
+- 156199 2024-12-28 2025-01-28 60-Minute Average
+- 156171 2024-12-28 2025-01-28 60-Minute Average
+
+Everything but the sensor index at the beginning is the same.
+
+
 
 ### IV. "Wait, so what does this script actually *do?*"
 
