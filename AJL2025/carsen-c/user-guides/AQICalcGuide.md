@@ -87,7 +87,7 @@ Highlight the first five lines, and click "Run."
 #### c. Sensor indices and sorting sensors
 The sensor index is a number that identifies a specific PurpleAir sensor. These indices are written into the names of data pulled from specific sensors automatically.
 
-To look at specific sensors, a list of the indices can be kept. The indices of sensors affiliated with the Air Justice Lab are: '188595,220769,220793,164327,156051,166257,87173,149970,149966, 166363,151552,166677,166327,166653,151490,151536,166717,156171,156199,164351,166471'
+To look at specific sensors, a list of the indices can be kept. The indices of sensors affiliated with the Air Justice Lab are: `188595,220769,220793,164327,156051,166257,87173,149970,149966, 166363,151552,166677,166327,166653,151490,151536,166717,156171,156199,164351,166471`
 
 For your specific uses, make sure to list your or your organization's target sensors. Subsets of your sensors may also be useful to look at.
 
