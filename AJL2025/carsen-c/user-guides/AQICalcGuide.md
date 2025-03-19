@@ -62,13 +62,24 @@ For example, my folder is named "PurpleAir Download 1-28-2025," and is located a
 
 To set the working directory, click "Session" > "Set Working Directory" > "Choose working directory"
 
-![Setting the working directory](/AJL2025/assets/workingdirectory.PNG)
+![Setting the working directory](/AJL2025/assets/workingdirectory.png)
 
 Make sure your working directory is as specific as possible and down to the most specific subfolder - that is, you can see every file from PurpleAir like this:
 
 ![Subfolder with all PurpleAir data](/AJL2025/assets/directory.PNG)
 
+Now, you're ready to start running code.
+
 #### b. Libraries
+
+A library in R stores a bunch of functions written in R that you can call to make a lot of stuff easier. Without these pre-loaded functions, you'd have to write the functions yourself. 
+
+AQI Calc.R depends on a few libraries - therefore, the first five lines must be run before you do anything else.
+
+Highlight the first five lines, and click "Run."
+
+
+
 
 #### c. Sensor indices and sorting sensors
 
