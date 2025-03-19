@@ -6,6 +6,8 @@ This is a guide to using [AQI Calc.R](https://github.com/mediasanctuary/air-just
 
 This user guide assumes you have downloaded data from PurpleAir. Much of learning how to use AQI Calc.R involves practicing with it. So, if you haven't done so, please follow [PurpleAirGuide.md](https://github.com/mediasanctuary/air-justice-lab/blob/AJL-Spring-2025/AJL2025/carsen-c/user-guides/PurpleAirGuide.md) and download some data to practice with.
 
+[Sample data](https://github.com/mediasanctuary/air-justice-lab/tree/AJL-Spring-2025/AJL2025/carsen-c/sample-data) is available as well, but I sincerely encourage trying to pull data yourself.
+
 **DON’T TOUCH THE .CSV**
 
 Downloading the data directly from PurpleAir records each measurement as a specific type of object. My code relies on preserving these object types.
@@ -80,10 +82,19 @@ AQI Calc.R depends on a few libraries - therefore, the first five lines must be 
 
 Highlight the first five lines, and click "Run."
 
-
-
+![Running libraries](/AJL2025/assets/runlibraries.png)
 
 #### c. Sensor indices and sorting sensors
+The sensor index is a number that identifies a specific PurpleAir sensor. These indices are written into the names of data pulled from specific sensors automatically.
+
+To look at specific sensors, a list of the indices can be kept. The indices of sensors affiliated with the Air Justice Lab are: '188595,220769,220793,164327,156051,166257,87173,149970,149966, 166363,151552,166677,166327,166653,151490,151536,166717,156171,156199,164351,166471'
+
+For your specific uses, make sure to list your or your organization's target sensors. Subsets of your sensors may also be useful to look at.
+
+AQI Calc.R stores the sensor indexes as a vector of numeric objects. Make sure that the blue numbers are a list of the specific indices you want to look at; AQI Calc.R comes pre-loaded with the Air Justice Lab's sensors.
+
+This vector is subdivided into two smaller vectors, as AQI Calc.R was initially written to compare the two groups. You may subset your indices however you want, or not at all.
+
 
 #### d. Reading and writing files
 
