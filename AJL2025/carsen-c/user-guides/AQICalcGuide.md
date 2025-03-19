@@ -39,10 +39,13 @@ When you first open RStudio, it'll look something like this:
 ![New RStudio](/AJL2025/assets/Rblank.PNG)
 
 To create a new file, click "File" > "New file" > "R Script"
+
 ![New R script pathway](/AJL2025/assets/newfile.png)
 
 To open an existing file - like AQL Calc.R - click "Open File..." and find "AQL Calc.R"
+
 ![Open existing file](/AJL2025/assets/openfile.png)
+
 ### III. Using AQI Calc.R - step by step
 
 #### a. Setting up the working directory
