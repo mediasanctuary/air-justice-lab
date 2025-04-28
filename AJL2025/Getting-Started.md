@@ -21,7 +21,8 @@ The Environmental Protection Agency (EPA) has modeled corrective functions that 
 
 The Air Justice Lab has also developed a localized corrective function, based on the EPA's recommendations, that can be used when PurpleAir sensors fail to record climatological data. The AJL's corrective function is specific to the Capitol Region, but the method it was built with may be applicable to any persons or organizations with access to data from a local weather station.
 
-This is further explained [here](https://github.com/mediasanctuary/air-justice-lab/tree/AJL-Spring-2025/AJL2025/reports-and-writings/Corrective-Functions.md)
+This is further explained in [Correcting PurpleAir's Data
+](https://github.com/mediasanctuary/air-justice-lab/tree/AJL-Spring-2025/AJL2025/reports-and-writings/Corrective-Functions.md)
 
 ### Interpreting and Analyzing Data from PurpleAir
 PurpleAir's [interactive map](https://map.purpleair.com/air-quality-standards-us-epa-aqi?opt=%2F1%2Flp%2Fa10%2Fp604800%2FcC0#2.09/47.3/-65.83) automatically uses their readings of PM2.5 and calculates the corresponding AQI. However, when pulling sets of data, there isn't a built-in calculator.
