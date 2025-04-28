@@ -31,4 +31,18 @@ Where possible, the EPA’s multilinear corrective function should be applied. T
 
 ### The issue of historical data
 
+The AJL is awaiting a response from the NRCC after requesting daily climate data for the past year; until then, the AJL has access to the [monthly](https://forecast.weather.gov/product.php?site=NWS&product=CLM&issuedby=ALB) reports spanning the past 12 months and the [daily](https://forecast.weather.gov/product.php?site=NWS&product=CLI&issuedby=ALB) reports spanning the past month. 
+
+The AJL is tracking [relevant climate data](https://docs.google.com/spreadsheets/d/1XaP1y6_JKlXmWJ_GM6xlKWWmWB0-UERUWIhiibs8GAI/edit?usp=sharing) as well, sourced from the Albany, NY NWS station.
+
 ## So, How Are We Calculating This, Anyway?
+
+### Means and Standard Deviations
+
+#### Monthly Mean and Stdev - April
+
+From 04/03/2025 - 04/27-2025, the mean relative humidity using daily averages recorded by the Albany, NY NWS Station was 61.2, with a standard deviation of 11.4. When this value is inserted into the RH term of the corrective function - that is, 0.086RH - the mean of 0.086RH becomes 5.3 with a standard deviation of 0.98. This is comparatively small variance to the corrected PM2.5 values, and therefore the AJL may use the mean relative humidity of April in the corrective function when relative humidity is not recorded by PurpleAir sensors.
+
+#### Yearly Mean and Stdev - April 2024 - March 2025
+
+From April 2024 - March 2025, the mean relative humidity recorded using monthly averages by the Albany, NY NWS Station was 65.6, with a standard deviation of 3.9. This comparitively small variance suggests that, for situations where relative humidity is not recorded by PurpleAir sensors, the yearly mean relative humidity can also reliably be used in the corrective function.
