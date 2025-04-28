@@ -45,4 +45,8 @@ From 04/03/2025 - 04/27-2025, the mean relative humidity using daily averages re
 
 #### Yearly Mean and Stdev - April 2024 - March 2025
 
-From April 2024 - March 2025, the mean relative humidity recorded using monthly averages by the Albany, NY NWS Station was 65.6, with a standard deviation of 3.9. This comparitively small variance suggests that, for situations where relative humidity is not recorded by PurpleAir sensors, the yearly mean relative humidity can also reliably be used in the corrective function.
+From April 2024 - March 2025, the mean relative humidity recorded using monthly averages by the Albany, NY NWS Station was 65.6, with a standard deviation of 3.9. This comparitively small variance suggests that, for situations where relative humidity is not recorded by PurpleAir sensors, where monthly averages are not available, or where multiple months of data are being corrected at once, the yearly mean relative humidity can also reliably be used in the corrective function.
+
+Where possible, data from PurpleAir sensors should be used first, and monthly averages second. The yearly mean's availability is also important, though, when other options fail.
+
+The AJL will continue to record daily climatological data provided by the NWS in hopes of refining the localized corrective function.
