@@ -50,3 +50,15 @@ From April 2024 - March 2025, the mean relative humidity recorded using monthly 
 Where possible, data from PurpleAir sensors should be used first, and monthly averages second. The yearly mean's availability is also important, though, when other options fail.
 
 The AJL will continue to record daily climatological data provided by the NWS in hopes of refining the localized corrective function.
+
+### Building a Corrective Function
+
+As the EPA recommends, the mean relative humidity may be held constant such that the multilinear corrective function instead becomes a linear regression; that is - 
+If PAcf_1  <= 343:
+
+PM2.5 = 0.524PAcf_1 - 0.0852*X + 5.72
+
+where PAcf_1 = the average of channels A and B
+
+X = the average local relative humidity calculated using external weather data
+
