@@ -44,8 +44,7 @@ PM2.5 = 0.524PAcf_1 - 0.0852*X + 5.72
 
 where PAcf_1 = the average of channels A and B
 
-X = the average local relative humidity calculated using weather data from other PurpleAir sensors
-
+X = the average local relative humidity calculated using external weather data 
 ### Smoke Conditions
 If PAcf_1  <= 343:
 
