@@ -109,7 +109,7 @@ For example, let the files be named:
 
 Everything but the sensor index at the beginning is the same.
 
-![File reader](/AJL2025/assets/filereader.PNG)
+![File reader](/AJL2025/assets/name.PNG)
 
 The green text in quotes is our standardized name. Replace that text - leave the quotation marks - with whatever the dates and intervals are for *all of your files.* If you didn't mess with the initial download, they should be fine. In case they aren't, you should edit the file names directly before running AQI Calc.R.
 
