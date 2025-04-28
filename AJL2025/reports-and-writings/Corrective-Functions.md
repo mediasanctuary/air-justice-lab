@@ -30,24 +30,34 @@ Where possible, the EPA’s multilinear corrective function should be applied. T
 ## 2.1 - Corrective Functions
 ### Ambient Air Quality (that is, smokeless)
 If PAcf_1  <= 343:
+
 PM2.5 = 0.524PAcf_1 - 0.0852*RH + 5.72
+
 where PAcf_1 = the average of channels A and B
+
 RH = relative humidity as a percent
 
 ### Ambient Air Quality - without relative humidity
 If PAcf_1  <= 343:
+
 PM2.5 = 0.524PAcf_1 - 0.0852*X + 5.72
+
 where PAcf_1 = the average of channels A and B
+
 X = the average local relative humidity calculated using weather data from other PurpleAir sensors
 
 ### Smoke Conditions
 If PAcf_1  <= 343:
+
 PM2.5 = 0.51PAcf_1 - 3.21
+
 where PAcf_1 = the average of channels A and B
 
 ### Smoke Conditions - but much worse
 If PAcf_1  is > 343:
+
 PM2.5 = 0.46PAcf_1 + (3.93 * 10-4)(PAcf_1)2 + 2.97
+
 where PAcf_1 = the average of channels A and B
 
 ## Source
