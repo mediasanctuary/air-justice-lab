@@ -1,4 +1,4 @@
-# PurpleAir Sensors
+# Correcting PurpleAir's Data
 
 ## 1.0 - Summary
 
@@ -49,3 +49,7 @@ where PAcf_1 = the average of channels A and B
 If PAcf_1  is > 343:
 PM2.5 = 0.46PAcf_1 + (3.93 * 10-4)(PAcf_1)2 + 2.97
 where PAcf_1 = the average of channels A and B
+
+## Source
+[Development and Application of a United States wide correction for
+PMdata collected with the PurpleAir sensor](https://github.com/mediasanctuary/air-justice-lab/blob/AJL-Spring-2025/AJL2025/assets/amt-2020-413.pdf)
