@@ -93,8 +93,6 @@ For your specific uses, make sure to list your or your organization's target sen
 
 AQI Calc.R stores the sensor indexes as a vector of numeric objects. Make sure that the blue numbers are a list of the specific indices you want to look at; AQI Calc.R comes pre-loaded with the Air Justice Lab's sensors.
 
-This vector is subdivided into two smaller vectors, as AQI Calc.R was initially written to compare the two groups. You may subset your indices however you want, or not at all.
-
 ![Sensor indices vector](/AJL2025/assets/indices.PNG)
 
 #### d. Reading and writing files
