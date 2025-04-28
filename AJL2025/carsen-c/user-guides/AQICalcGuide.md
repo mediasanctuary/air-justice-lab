@@ -18,9 +18,7 @@ Downloading the data directly from PurpleAir records each measurement as a speci
 
 Yeah, that happens. The script currently takes a constant numerical value - the monthly or yearly mean of relative humidity, depending on available data - and inserts that where humidity is missing.
 
-[This spreadsheet](https://docs.google.com/spreadsheets/d/1XaP1y6_JKlXmWJ_GM6xlKWWmWB0-UERUWIhiibs8GAI/edit?usp=sharing) is manually updated each month, and calculates the mean relative humidity. A thorough explanation of why this is an acceptable correction is available [here]
-
-My script accounts for missing values.
+[This spreadsheet](https://docs.google.com/spreadsheets/d/1XaP1y6_JKlXmWJ_GM6xlKWWmWB0-UERUWIhiibs8GAI/edit?usp=sharing) is manually updated each month, and calculates the mean relative humidity. A thorough explanation of why this is an acceptable correction is available [here](https://github.com/mediasanctuary/air-justice-lab/blob/AJL-Spring-2025/AJL2025/reports-and-writings/AJL-Local-Correction.md)
 
 **Organizing the raw data.**
 
@@ -80,9 +78,9 @@ Now, you're ready to start running code.
 
 A library in R stores a bunch of functions written in R that you can call to make a lot of stuff easier. Without these pre-loaded functions, you'd have to write the functions yourself. 
 
-AQI Calc.R depends on a few libraries - therefore, the first five lines must be run before you do anything else.
+AQI Calc.R depends on a few libraries - therefore, the first five line must be run before you do anything else.
 
-Highlight the first five lines, and click "Run."
+Highlight the first line, and click "Run."
 
 ![Running libraries](/AJL2025/assets/runlibraries.png)
 
