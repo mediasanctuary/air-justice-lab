@@ -19,7 +19,7 @@ Upon averaging relative humidity in the area, this value can be inserted into da
 Where possible, the EPA’s multilinear corrective function should be applied. The localized linear regression should only be used if relative humidity is not recorded by PurpleAir sensors.
 
 
-## External Sources of Data
+## 1.1 External Sources of Data
 
 ### Available resources
 
@@ -35,7 +35,7 @@ The AJL is awaiting a response from the NRCC after requesting daily climate data
 
 The AJL is tracking [relevant climate data](https://docs.google.com/spreadsheets/d/1XaP1y6_JKlXmWJ_GM6xlKWWmWB0-UERUWIhiibs8GAI/edit?usp=sharing) as well, sourced from the Albany, NY NWS station.
 
-## So, How Are We Calculating This, Anyway?
+## 1.3 So, How Are We Calculating This, Anyway?
 
 ### Means and Standard Deviations
 
