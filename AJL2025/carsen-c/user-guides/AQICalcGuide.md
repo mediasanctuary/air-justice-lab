@@ -16,7 +16,9 @@ Downloading the data directly from PurpleAir records each measurement as a speci
 
 **“Wait, but some of the sensors didn’t record humidity”**
 
-Yeah, that happens. I'm refining and testing a mathematical model for a corrective function linear in PM2.5 - that is, the measurement of particulate matter with a diameter of 2.5 micrometers and smaller. The current model is located within the script - last updated 1/28/25.
+Yeah, that happens. The script currently takes a constant numerical value - the monthly or yearly mean of relative humidity, depending on available data - and inserts that where humidity is missing.
+
+[This spreadsheet](https://docs.google.com/spreadsheets/d/1XaP1y6_JKlXmWJ_GM6xlKWWmWB0-UERUWIhiibs8GAI/edit?usp=sharing) is manually updated each month, and calculates the mean relative humidity. A thorough explanation of why this is an acceptable correction is available [here]
 
 My script accounts for missing values.
 
